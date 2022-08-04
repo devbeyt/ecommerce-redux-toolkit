@@ -3,14 +3,43 @@
 .navigation
 {
     width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-bottom: 0.5px solid lightslategray;
+}
+
+.space
+{
+    margin-top: 70px;
 }
 
 .nav_container
+{
+    height: 65px;
+}
+
+.nav_container,
+.nav_account_wrapper,
+.nav_search_box
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.nav_logo
+{
+    font-size: 24px;
+    color: deeppink;
+    text-decoration: none;
+}
+
+
+
+
 
 
 /* ************** end of desktop styles *************** */

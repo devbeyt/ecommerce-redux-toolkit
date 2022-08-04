@@ -1,14 +1,16 @@
+
 body
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  min-height: 1200vh;
 }
 
 .container
 {
-  width: calc(100% - 50px);
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 

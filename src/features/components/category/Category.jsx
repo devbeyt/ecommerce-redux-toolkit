@@ -2,7 +2,7 @@ import React from 'react'
 
 function Category() {
   return (
-    <div className='category'>Category</div>
+    <div className='category space'>Category</div>
   )
 }
 
