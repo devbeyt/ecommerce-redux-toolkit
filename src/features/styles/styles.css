@@ -1,0 +1,16 @@
+
+/* ************** desktop styles start *************** */
+.navigation
+{
+    width: 100%;
+}
+
+.nav_container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ************** end of desktop styles *************** */

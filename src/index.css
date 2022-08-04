@@ -1,0 +1,19 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container
+{
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+
+.main
+{
+  display: flex;
+  justify-content: space-between;
+}
