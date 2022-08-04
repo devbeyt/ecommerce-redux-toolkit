@@ -1,21 +1,26 @@
-
-body
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  min-height: 1200vh;
+body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      min-height: 1200vh;
+      background-color: #fff;
 }
 
-.container
-{
-  width: calc(100% - 100px);
-  margin: 0 auto;
+.container {
+      width: calc(100% - 100px);
+      margin: 0 auto;
 }
 
-.main
-{
-  display: flex;
-  justify-content: space-between;
+.main {
+      display: flex;
+      justify-content: space-between;
+}
+
+@media screen and (max-width:767px) {
+      .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
 }
