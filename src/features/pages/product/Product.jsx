@@ -12,6 +12,7 @@ function Product({product}) {
         dispatch(addToCart(product))
   }
 
+
   return (<div className='product'>
     <AiOutlineHeart size={20} className="product_icon"/>
     <h5 className='product_title'>{product.title}</h5>

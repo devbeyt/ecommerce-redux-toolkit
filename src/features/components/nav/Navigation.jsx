@@ -5,8 +5,11 @@ import './../../styles/styles.css'
 import {AiOutlineUser,AiOutlineHeart} from 'react-icons/ai'
 import {FiShoppingCart} from 'react-icons/fi'
 import Hamburger from '../hamburger/Hamburger'
+import { useSelector } from 'react-redux'
 
 function Navigation() {
+  const count = useSelector(state=>state.cart.cartItems.length)
+
   return (
     <nav className='navigation'>
         <div className="container nav_container">
@@ -16,7 +19,7 @@ function Navigation() {
             <div className="register_box nav_icon"><AiOutlineUser size={20}/></div>
             <div className="favorite_box nav_icon"><AiOutlineHeart size={20}/></div>
             <Link to="/cart" className="cart_box nav_icon"><FiShoppingCart size={20}/>
-            <span className='cart_quantity'>0</span>
+            <span className='cart_quantity'>{count}</span>
             </Link>
           </div>
           <Hamburger/>

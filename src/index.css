@@ -17,6 +17,17 @@ body {
       justify-content: space-between;
 }
 
+.text_center
+{
+      text-align: center;
+}
+
+
+
+
+
+/* mobile styles */
+
 @media screen and (max-width:767px) {
       .main {
             display: flex;

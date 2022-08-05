@@ -4,6 +4,7 @@ import Navigation from './../components/nav/Navigation'
 import Category from './../components/category/Category'
 import Footer from './../components/footer/Footer'
 
+
 function Layouts() {
   return (
     <div className='layouts'>
