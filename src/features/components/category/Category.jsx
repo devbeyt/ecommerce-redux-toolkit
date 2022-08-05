@@ -14,7 +14,7 @@ function Category() {
 
      const content = allCategories.map(category=>{
       return <li className='ul_li'>
-        <Link to="/" className='Link'>{category}</Link>
+        <Link to={`${category}`} className='Link'>{category}</Link>
       </li>
      })
 

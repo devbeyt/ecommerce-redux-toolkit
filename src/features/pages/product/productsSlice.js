@@ -2,31 +2,32 @@ import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 
 
 
+export const fetchProducts = createAsyncThunk('products/fetchProducts', async()=>{
+    const response = await fetch(`https://fakestoreapi.com/products`)
+    return await response.json()
+})
+
+
 const initialState = {
     status:'idle',
     entities:[],
     error:null
 }
 
-export const fetchProducts = createAsyncThunk('products/fetchProducts', async()=>{
-    const response = await fetch(`https://dummyjson.com/products`)
-    return await response.json();
-})
-
 const productsSlice = createSlice({
-    name:'products',
+    name: 'products',
     initialState,
     reducers:{},
     extraReducers:{
         [fetchProducts.pending]:(state,action)=>{
-            state.status = 'loading';
+            state.status = "loading";
         },
         [fetchProducts.fulfilled]:(state,action)=>{
             state.status = 'success';
             state.entities = action.payload;
         },
         [fetchProducts.rejected]:(state,action)=>{
-            state.status = 'failed';
+            state.status = "failed";
             state.error = action.payload.error.message
         }
     }

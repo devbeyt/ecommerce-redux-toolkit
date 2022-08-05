@@ -10,7 +10,7 @@ const initialState = {
 
 
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async ()=>{
-    const response = await fetch(`https://dummyjson.com/products/categories`)
+    const response = await fetch(`https://fakestoreapi.com/products/categories`)
     return await response.json()
 })
 
