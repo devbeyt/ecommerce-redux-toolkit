@@ -3,9 +3,9 @@ import './../../styles/styles.css'
 
 function Hamburger() {
   return (<div class="hamburger_menu">
-  <div class="bar_top"></div>
-  <div class="bar_middle"></div>
-  <div class="bar_bottom"></div>
+  <div className="bar_top"></div>
+  <div className="bar_middle"></div>
+  <div className="bar_bottom"></div>
 </div>
   )
 }

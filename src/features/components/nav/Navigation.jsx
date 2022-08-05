@@ -15,7 +15,9 @@ function Navigation() {
           <div className="nav_account_wrapper">
             <div className="register_box nav_icon"><AiOutlineUser size={20}/></div>
             <div className="favorite_box nav_icon"><AiOutlineHeart size={20}/></div>
-            <Link to="/cart" className="cart_box nav_icon"><FiShoppingCart size={20}/></Link>
+            <Link to="/cart" className="cart_box nav_icon"><FiShoppingCart size={20}/>
+            <span className='cart_quantity'>0</span>
+            </Link>
           </div>
           <Hamburger/>
         </div>

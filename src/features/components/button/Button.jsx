@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Button({text,styles}) {
+function Button({text,styles,handle}) {
   return (
-    <button type='button' className={styles}>{text}</button>
+    <button type='button' className={styles} onClick={handle}>{text}</button>
   )
 }
 
