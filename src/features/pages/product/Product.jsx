@@ -27,17 +27,31 @@ function Product({product}) {
   }
 
 
-  return (<div className='product' >
-    <div onClick={()=>handleFavorite(product)}>
+  return ( <div class="card">
+     <div onClick={()=>handleFavorite(product)}>
       <AiFillHeart size={20} className={`product_icon ${heartStyle && 'heart_style'}`}/>
       </div>
-    <h5 className='product_title'>{product.title}</h5>
-    <img src={product.image} alt={product.title} className="product_img" onClick={()=>getProductDetails(product)}/>
-    <span className='product_description'>{product.description.substring(0, 70)}</span>
-    <span className='product_price'>price: ${product.price}</span>
-    <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
+  <img src={product.image} alt={product.title} onClick={()=>getProductDetails(product)}/>
+  <div class="card_body">
+    <div class="row">
+      <div class="card_title">
+        <h5>{product.title}</h5>
+        <span>Price: ${product.price}</span>
+      </div>
+    </div>
+    <hr />
+    <p>
+     {product.description.substring(0, 40)}
+    </p>
+      <div class="btn">
+      <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
+    </div>
   </div>
+</div>
   )
 }
 
 export default Product
+
+
+
