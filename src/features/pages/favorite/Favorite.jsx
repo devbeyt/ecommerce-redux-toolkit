@@ -15,7 +15,8 @@ function Favorite() {
           <div className="favorite_img_wrapper">
           <img src={image} className="favory_img" alt={title}/>
           </div>
-          <span className='favorite_description'>{description}</span>
+          <span className='favorite_description'>{description.substring(1,80)}</span>
+          <button type='button' className='remove_btn'>remove</button>
       </div>
     })
     
