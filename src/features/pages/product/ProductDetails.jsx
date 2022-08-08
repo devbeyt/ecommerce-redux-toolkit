@@ -1,10 +1,16 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useGetProductDetailsQuery } from '../../../services/apiSlice'
+import './../../styles/styles.css'
 
 function ProductDetails() {
     const {productId} = useParams();
+    const navigate = useNavigate();
     const { data: product, isFetching, isSuccess } = useGetProductDetailsQuery(productId)
+
+    const GoHomePage = ()=>{
+      navigate('/')
+    }
         
     let content
     if(isFetching){
@@ -16,6 +22,7 @@ function ProductDetails() {
         <div className="product_details_img_wrapper">
         <img src={product.image} className="product_details_img" alt={product.title}/>
       <h3 className='product_details_title'>{product.title}</h3>
+      <button type='button' onClick={GoHomePage}>Go back</button>
         </div>
       <p className='product_details_price'>Price: ${product.price}</p>
       <span className='product_details_description'>
