@@ -14,7 +14,7 @@ const favoritesSlice = createSlice({
     reducers: {
         addFavorite(state, action) {
                 state.entities.push(action.payload)
-                state.total =+ 1
+                state.total += 1
         },
         removeFromFavorites(state,action){
             let filtered = state.entities.filter(cartItem=>cartItem.id !== action.payload.id)
