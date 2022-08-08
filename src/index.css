@@ -8,13 +8,8 @@ body {
 }
 
 .container {
-      width: calc(100% - 100px);
+      max-width: 1280px;
       margin: 0 auto;
-}
-
-.main {
-      display: flex;
-      justify-content: space-between;
 }
 
 .text_center
@@ -29,10 +24,6 @@ body {
 /* mobile styles */
 
 @media screen and (max-width:767px) {
-      .main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-      }
+      
 }
 

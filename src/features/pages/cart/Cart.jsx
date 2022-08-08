@@ -10,7 +10,7 @@ function Cart() {
   
   let content = items.length > 0 ? items.map(item=>{
     return <CartItem item={item}/>
-  }) : <Messages message="Sebetiniz bosdur...( " styles="messages_styles"/>
+  }) : <Messages message="Your Cart is empty..." styles="messages_styles"/>
 
 
   return (

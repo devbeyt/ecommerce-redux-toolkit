@@ -15,7 +15,7 @@ function CartItem({ item }) {
                 <span className='item_price'>Price: {price} $</span>
                 
                 <div className="item_delete_container">
-                <Button text="mehsulu sil" styles="remove_btn" />
+                <Button text="remove" styles="remove_btn" />
                 </div>
         </div>
     )

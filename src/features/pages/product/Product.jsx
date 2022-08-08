@@ -18,7 +18,7 @@ function Product({product}) {
     <h5 className='product_title'>{product.title}</h5>
     <img src={product.image} alt={product.title} className="product_img"/>
     <span className='product_description'>{product.description.substring(0, 50)}</span>
-    <Button text="sepete elve et" styles="addtocart_btn" handle={()=>handleCart(product)}/>
+    <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
   </div>
   )
 }
