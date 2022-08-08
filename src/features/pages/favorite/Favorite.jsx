@@ -5,6 +5,7 @@ import { favoritesSelector } from './favoritesSlice'
 
 function Favorite() {
     const favorites = useSelector(favoritesSelector)
+   
 
 
     const content = favorites.map(favory=>{

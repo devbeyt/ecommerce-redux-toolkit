@@ -14,6 +14,7 @@ const favoritesSlice = createSlice({
     reducers: {
         addFavorite(state, action) {
                 state.entities.push(action.payload)
+                state.total =+ 1
         }
     }
 })
