@@ -263,6 +263,18 @@
 {
   width: 30%;
 }
+
+.go_home_btn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: deeppink;
+  color: #fff;
+}
 /* end of product details styles */
 
 
@@ -314,6 +326,12 @@
     width: 90%;
     margin: 20px auto;
   }
+  .product_details_box
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width:767px) and (max-width:1200px) {
@@ -322,6 +340,12 @@
     grid-template-columns: repeat(3, auto);
     grid-gap:10px;
     
+  }
+  .product_details_box
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
