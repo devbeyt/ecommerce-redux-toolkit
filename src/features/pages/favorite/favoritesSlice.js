@@ -26,6 +26,7 @@ const favoritesSlice = createSlice({
         removeFromFavorites(state,action){
             let filtered = state.entities.filter(cartItem=>cartItem.id !== action.payload.id)
             state.entities = filtered;
+            state.total -= 1
         
     }
 }})
