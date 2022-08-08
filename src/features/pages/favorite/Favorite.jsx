@@ -28,12 +28,16 @@ function Favorite() {
           <button type='button' className='remove_btn' onClick={()=>removeFavory(favory)}>remove</button>
       </div>
     })
+
+
+    if(content.length <=0){
+       return <h3 className='text_center title'>You haven't choosen yet...</h3>
+    }
     
   return (
     <div className="favorite page">
-      <h3 className='text_center title'>My Favorites...</h3>
        <div className="favorite_container ">
-             {content} 
+       {content}
        </div>
     </div>
   )
