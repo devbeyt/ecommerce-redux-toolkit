@@ -21,18 +21,19 @@ function Product({product}) {
   }
 
   const handleFavorite = (product)=>{
-      dispatch(addFavorite(product))
-      setHeartStyle(!heartStyle)
+        setHeartStyle(!heartStyle)
+        dispatch(addFavorite(product))
+      
   }
 
 
   return (<div className='product' >
     <div onClick={()=>handleFavorite(product)}>
-      <AiFillHeart size={20} className={`product_icon ${heartStyle ? 'heart_style' : null}`}/>
+      <AiFillHeart size={20} className={`product_icon ${heartStyle && 'heart_style'}`}/>
       </div>
     <h5 className='product_title'>{product.title}</h5>
     <img src={product.image} alt={product.title} className="product_img" onClick={()=>getProductDetails(product)}/>
-    <span className='product_description'>{product.description.substring(0, 50)}</span>
+    <span className='product_description'>{product.description.substring(0, 70)}</span>
     <span className='product_price'>price: ${product.price}</span>
     <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
   </div>

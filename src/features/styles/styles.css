@@ -182,7 +182,7 @@
 }
 
 .product {
-  width: 170px;
+  width: 200px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,6 @@
 }
 
 .product_img {
-  height: 200px;
   width: 100%;
 }
 
