@@ -6,7 +6,7 @@ import {AiOutlineUser,AiOutlineHeart} from 'react-icons/ai'
 import {FiShoppingCart} from 'react-icons/fi'
 import Hamburger from '../hamburger/Hamburger'
 import { useSelector } from 'react-redux'
-import { favoritesSelector } from '../../pages/favorite/favoritesSlice'
+
 
 function Navigation() {
   const navigate = useNavigate()
