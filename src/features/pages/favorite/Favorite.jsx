@@ -1,12 +1,15 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import './../../styles/styles.css'
-import { favoritesSelector } from './favoritesSlice'
+import { favoritesSelector, removeFromFavorites } from './favoritesSlice'
 
 function Favorite() {
     const favorites = useSelector(favoritesSelector)
+    const dispatch = useDispatch()
    
-
+    const removeFavory = (favory)=>{
+         dispatch(removeFromFavorites(favory))
+    }
 
     const content = favorites.map(favory=>{
       const {image,title,id,description,price} = favory
@@ -16,7 +19,7 @@ function Favorite() {
           <img src={image} className="favory_img" alt={title}/>
           </div>
           <span className='favorite_description'>{description.substring(1,80)}</span>
-          <button type='button' className='remove_btn'>remove</button>
+          <button type='button' className='remove_btn' onClick={()=>removeFavory(favory)}>remove</button>
       </div>
     })
     
