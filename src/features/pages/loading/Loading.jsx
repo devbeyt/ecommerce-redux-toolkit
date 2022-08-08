@@ -4,7 +4,7 @@ import './../../styles/styles.css'
 function Loading() {
   return (
     <div className="loading page">
-            Loading
+           <h3> Loading...</h3>
     </div>
   )
 }

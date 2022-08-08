@@ -237,6 +237,34 @@
 /* end of products styles  */
 
 
+/* product details styles start */
+
+.product_details
+{
+ text-align: center;
+}
+
+.product_details_box
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+
+.product_details_img
+{
+  width: 300px;
+  height: 400px;
+}
+
+.product_details_description
+{
+  width: 30%;
+}
+/* end of product details styles */
+
 
 
 
