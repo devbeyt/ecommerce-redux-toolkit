@@ -13,8 +13,15 @@ const favoritesSlice = createSlice({
     initialState,
     reducers: {
         addFavorite(state, action) {
-                state.entities.push(action.payload)
-                state.total += 1
+            const index = state.entities.findIndex(item=>item.id === action.payload.id)
+            if(index >=0){
+                state.entities[index] = state.entities[index]
+            }else{
+                const item = {...action.payload}
+                state.entities.push(item)
+                state.total +=1
+            };
+                
         },
         removeFromFavorites(state,action){
             let filtered = state.entities.filter(cartItem=>cartItem.id !== action.payload.id)
