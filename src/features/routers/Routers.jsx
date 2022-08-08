@@ -4,6 +4,7 @@ import ProductList from './../pages/product/ProductList'
 import Cart from './../pages/cart/Cart'
 import NotFound from './../pages/notFound/NotFound'
 import ProductDetails from '../pages/product/ProductDetails'
+import Favorite from './../pages/favorite/Favorite'
 
 
 function Routers() {
@@ -11,6 +12,7 @@ function Routers() {
     <Route path="/" element={<ProductList/>}/>
     <Route path="/cart" element={<Cart/>}/>
     <Route path="/products/:productId" element={<ProductDetails/>}/>
+    <Route path="/favorite" element={<Favorite/>}/>
     <Route path="*" element={<NotFound/>}/>
   </Routes>
   )

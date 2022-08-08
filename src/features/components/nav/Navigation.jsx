@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Search from '../search/Search'
 import './../../styles/styles.css'
 import {AiOutlineUser,AiOutlineHeart} from 'react-icons/ai'
@@ -8,7 +8,12 @@ import Hamburger from '../hamburger/Hamburger'
 import { useSelector } from 'react-redux'
 
 function Navigation() {
+  const navigate = useNavigate()
   const count = useSelector(state=>state.cart.cartItems.length)
+
+ const goFavoritePage =()=>{
+      navigate('/favorite')
+ }
 
   return (
     <nav className='navigation'>
@@ -17,7 +22,7 @@ function Navigation() {
           <Search/>
           <div className="nav_account_wrapper">
             <div className="register_box nav_icon"><AiOutlineUser size={20}/></div>
-            <div className="favorite_box nav_icon"><AiOutlineHeart size={20}/></div>
+            <div className="favorite_box nav_icon" onClick={goFavoritePage}><AiOutlineHeart size={20}/></div>
             <Link to="/cart" className="cart_box nav_icon"><FiShoppingCart size={20}/>
             <span className='cart_quantity'>{count}</span>
             </Link>
