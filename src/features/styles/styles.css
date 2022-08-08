@@ -312,13 +312,6 @@
     width: 100%;
   }
 
-  .category {
-    width: 100%;
-    border: none;
-    overflow: hidden;
-    display: none;
-  }
-
   .product_list {
     display: grid;
     grid-template-columns: repeat(2, auto);
