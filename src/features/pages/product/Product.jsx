@@ -22,7 +22,7 @@ function Product({product}) {
 
   const handleFavorite = (product)=>{
         setHeartStyle(!heartStyle)
-        dispatch(addFavorite(product))
+        dispatch(addFavorite(product,heartStyle))
       
   }
 

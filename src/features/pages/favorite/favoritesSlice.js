@@ -19,7 +19,7 @@ const favoritesSlice = createSlice({
             }else{
                 const item = {...action.payload}
                 state.entities.push(item)
-                state.total +=1
+                state.total +=1               
             };
                 
         },
