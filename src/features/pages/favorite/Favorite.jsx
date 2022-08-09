@@ -20,7 +20,7 @@ function Favorite() {
     const content = favorites.map(favory=>{
       const {image,title,id,description,price} = favory
       return <div key={id} className="favorite_product">
-         <span className='favory_title'>{title}</span>
+         <span className='favorite_title'>{title}</span>
           <div className="favorite_img_wrapper">
           <img src={image} className="favory_img" alt={title} onClick={()=>getProductDetails(favory)}/>
           </div>
