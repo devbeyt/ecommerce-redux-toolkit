@@ -26,28 +26,18 @@ function Product({product}) {
       
   }
 
-
-  return ( <div class="card">
-     <div onClick={()=>handleFavorite(product)}>
-      <AiFillHeart size={20} className={`product_icon ${heartStyle && 'heart_style'}`}/>
-      </div>
-  <img src={product.image} alt={product.title} onClick={()=>getProductDetails(product)}/>
-  <div class="card_body">
-    <div class="row">
-      <div class="card_title">
-        <h5>{product.title}</h5>
-        <span>Price: ${product.price}</span>
-      </div>
+  return (    <article>
+    <img src={product.image}  onClick={()=>getProductDetails(product)}/>
+    <div class="text">
+      <h3>{product.title}</h3>
+      <p>$ {product.price}</p>
+      <p>{product.description.substring(1,70)}</p>
+          <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
     </div>
-    <hr />
-    <p>
-     {product.description.substring(0, 40)}
-    </p>
-      <div class="btn">
-      <Button text="add to cart" styles="addtocart_btn" handle={()=>handleCart(product)}/>
-    </div>
-  </div>
-</div>
+    <div onClick={()=>handleFavorite(product)}>
+     <AiFillHeart size={24} className={`product_icon ${heartStyle && 'heart_style'}`}/>
+     </div>
+  </article>
   )
 }
 

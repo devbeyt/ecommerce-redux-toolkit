@@ -21,7 +21,7 @@ function ProductList() {
     //  },[dispatch])
     
   return (
-    <div className='product_list page'>
+    <div className='grid page'>
      {error ? (
       <>Oh no, there was an error</>
     ) : isLoading ? (
