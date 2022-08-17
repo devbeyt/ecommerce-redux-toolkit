@@ -28,7 +28,7 @@ function Product({product}) {
 
   return (    <article>
     <img src={product.image}  onClick={()=>getProductDetails(product)}/>
-    <div class="text">
+    <div className="text">
       <h3>{product.title}</h3>
       <p>$ {product.price}</p>
       <p>{product.description.substring(1,70)}</p>

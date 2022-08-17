@@ -19,7 +19,7 @@ const persistConfig = {
 
 
 const reducers = combineReducers({
-    products: productsReducer,
+        products: productsReducer,
         cart:cartReducer,
         favorites:favoritesReducer,
 

@@ -17,7 +17,16 @@ const initialState = {
 const productsSlice = createSlice({
     name: 'products',
     initialState,
-    reducers:{},
+    reducers:{
+        searchByProductName:(state,action)=>{
+            const filterBySearch = state.entities.filter(product=>product.title.includes(action.payload))
+            console.log(filterBySearch)
+            if(filterBySearch){
+                state.entities = filterBySearch;
+            }
+                
+        }
+    },
     extraReducers:{
         [fetchProducts.pending]:(state,action)=>{
             state.status = "loading";
@@ -35,4 +44,5 @@ const productsSlice = createSlice({
 
 
 export const productsSelector = state=>state.products.entities;
+export const {searchByProductName} = productsSlice.actions;
 export default productsSlice.reducer;

@@ -1,34 +1,43 @@
-import React from 'react'
-import { useGetProductsQuery } from '../../../services/apiSlice'
-// import { useDispatch,useSelector } from 'react-redux'
+import React,{useEffect} from 'react'
+// import { useGetProductsQuery } from '../../../services/apiSlice'
+import { useDispatch,useSelector } from 'react-redux'
 import './../../styles/styles.css'
-// import { fetchProducts } from './productsSlice';
+import { fetchProducts,productsSelector } from './productsSlice';
 import Product from './Product'
 import Loading from './../loading/Loading'
 
-function ProductList() {
-  // const dispatch = useDispatch();
-  // const allProducts = useSelector(productsSelector)
 
-  const { data = [], error, isLoading } = useGetProductsQuery()
+function ProductList() {
+  const dispatch = useDispatch();
+  const allProducts = useSelector(productsSelector)
+
+  // const { data = [], error, isLoading } = useGetProductsQuery()
+
   
-  let content = data.map(product=>{
+  
+  let content = allProducts.map(product=>{
              return <Product product={product}/>
   })
 
-    //  useEffect(()=>{
-    //    dispatch(fetchProducts())
-    //  },[dispatch])
+
+
+     useEffect(()=>{
+       dispatch(fetchProducts())
+     },[dispatch])
     
   return (
     <div className='grid page'>
-     {error ? (
+    
+      {content}
+
+
+     {/* {error ? (
       <>Oh no, there was an error</>
     ) : isLoading ? (
       <Loading/>
     ) : data ? (  
       content
-    ) : null}
+    ) : null} */}
     </div>
   )
 }
