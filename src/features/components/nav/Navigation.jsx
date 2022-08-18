@@ -1,4 +1,4 @@
-import React,{useTransition} from 'react'
+import React,{useDeferredValue} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Search from '../search/Search'
 import './../../styles/styles.css'
@@ -13,28 +13,29 @@ import { searchByProductName } from '../../pages/product/productsSlice'
 function Navigation() {
   const navigate = useNavigate()
   const dispatch = useDispatch();
-  const [isPending, startTransition] = useTransition();
+  //const [isPending, startTransition] = useTransition();
   const [search,setSearch] = useState('')
   const count = useSelector(state=>state.cart.cartItems.length)
   const total = useSelector(state=>state.favorites.total)
+  const values = useDeferredValue(search)
 
  const goFavoritePage =()=>{
       navigate('/favorite')
  }
 
  const handleSearch =(e)=>{
-  startTransition(()=>{
-    setSearch(e.target.value)
+  // startTransition(()=>{ 
+  // })
+  setSearch(e.target.value)
     dispatch(searchByProductName(search))
-  })
  }
- {isPending &&(<h1>Loading...</h1>) }
+ 
 
   return (
     <nav className='navigation'>
         <div className="container nav_container">
           <Link to="/" className="nav_logo">Ecommerce</Link>
-          <Search  handleSearch={handleSearch}/>
+          <Search value={values} handleSearch={handleSearch}/>
           <div className="nav_account_wrapper">
             <div className="register_box nav_icon"><AiOutlineUser size={20}/></div>
             <div className="favorite_box nav_icon" onClick={goFavoritePage}>
