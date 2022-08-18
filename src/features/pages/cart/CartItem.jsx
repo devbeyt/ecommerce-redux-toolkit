@@ -23,6 +23,7 @@ function CartItem({ item }) {
                 <div className="item_view">
                 <h5 className='item_title'>{item.title}</h5>
                 <img src={item.image} alt={item.title} className="item_img" onClick={()=>getProductDetails(item)}/>
+                <span>{item.price}</span>
                 </div>
 
                 <span className='item_price'>Price: {item.price} $</span>
